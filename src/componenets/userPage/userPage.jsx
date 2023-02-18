@@ -1,17 +1,15 @@
 import React from 'react';
-import logo from '../../img/logo_project.svg'
 import  classes from '../../css/userPageStyle.module.css'
 import PersonalPanel from './userPageComponents/PersonalPanel';
 import Panel from './userPageComponents/Panel';
+import BackGround from '../UI/BackGround';
 
 
 function UserPage() {
     
     return (
         <section className={classes.user__Page}>
-            <div className={classes.title}>
-                <h1>Дом вашей мечты</h1>
-            </div>
+            <BackGround/>
             <div className='container'>
                 <div className={classes.user__Page__inner}>
                 <PersonalPanel/>

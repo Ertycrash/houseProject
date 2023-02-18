@@ -1,8 +1,11 @@
 import Main from './Main'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './store/store'
 import { createTheme, ThemeProvider } from '@mui/material'
+import MainLayout from './layouts/MainLayout'
+import HomePage from './page/HomePage'
+import UserPage from './componenets/userPage/userPage'
 
 const theme = createTheme({
     palette: {
@@ -20,7 +23,12 @@ function App() {
       <BrowserRouter>
         <ThemeProvider theme={theme}>
           <Provider store={store}>
-            <Main />
+            <Routes>
+              <Route path='/' element={<MainLayout/>}>
+                  <Route index element={<HomePage/>}/>
+                  <Route path='/userPage'  element={<UserPage/>}/>
+              </Route>
+            </Routes>
           </Provider>
         </ThemeProvider>
       </BrowserRouter>
