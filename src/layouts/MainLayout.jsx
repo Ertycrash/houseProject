@@ -6,8 +6,8 @@ import Header from '../componenets/header/Header'
 function MainLayout() {
   return (
     <div>
-        <Header/>
-        <Outlet/>
+        {/* <Header/> */}
+        {/* <Outlet/> */}
         <Footer/>
     </div>
   )
